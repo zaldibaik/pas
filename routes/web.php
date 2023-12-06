@@ -22,9 +22,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Route::get('/berita', [App\Http\Controllers\beritaController::class, 'berita'])->name('berita');
 
-Route::get('/kategori/create', [CategoriController::class, 'create'])->name('create');
-Route::get('/categori', [CategoryController::class, 'store'])->name('categori.store');
+Route::get('/kategori/create', [CategoriController::class, 'create'])->name('categori.create');
+Route::post('/kategori', [CategoryController::class, 'store'])->name('categori.store');
+// Route::get('/kategori', [CategoriController::class, 'index'])->name('categori.index');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

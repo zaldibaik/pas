@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <table class="table">
-        <a href="{{ route('kategori.create') }}"><button class="btn btn-info text-center" >Create</button></a>
+        <a href="{{--route('categori.create')--}}"><button class="btn btn-info text-center" >Create</button></a>
         <thead>
-            @foreach($categories as $category)
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">Title</th>
@@ -28,5 +28,7 @@
             </tr>
         </tbody>
     </table>
+
     @include('layouts.footer')
+    
     @endsection
